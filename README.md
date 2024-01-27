@@ -8,3 +8,4 @@ I have designed the about page such that it has information in an animated bento
 > I intend to redesign the contact page significantly to better fit the design language I have crafted for the rest of the website. <br>
 > I haven't made the design completely responsive yet however if you encounter a design flaw please report it to me.
 
+### The website is live at http://www.gyryk.com/
