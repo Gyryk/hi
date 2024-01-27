@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Find me on your favourite social media site, or just shoot me an email!">
+        <meta name="copyright" content="Gyryk">
+        <meta name="author" content="Gyryk">
+
+        <title>Contact | Gyryk</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+        <script src="contact.js" defer></script>
+
+        <script src="https://www.google.com/recaptcha/api.js?render={6Le8NSYpAAAAAL8L5UQsjzq_--mOaFGqz5hg8-qz}"></script>
+        <script>
+            grecaptcha.ready(function () {
+                grecaptcha.execute('{6Le8NSYpAAAAAL8L5UQsjzq_--mOaFGqz5hg8-qz}', {action: 'submit'}).then(function (token) {
+                    console.info("got token: " + token);
+                    document.getElementById('g-recaptcha-response').value = token;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <!-- <div id="trailer" class="trailer">
+            <img id="trailer-icon" class="arrow"></i>
+        </div> -->
+
+        <div id="hamburger" class="hamburger">
+            <button id="menuButton"> <img src="img/burger.svg" alt="hamburger"> </button>
+        </div>
+        <div id="menu" class="menu">
+            <div id="text">
+                <div class="menu-item">
+                    <a href="/" class="word fancy" id="home">
+                        HOMEBASE
+                    </a>
+                </div>
+                <a href="/about.html" class="menu-item">
+                    <p class="word fancy" id="who">WHO</p>
+                    <p class="word fancy" id="am">AM</p>
+                    <p class="word fancy" id="about">I</p>
+                </a>
+                <a href="https://gyryk.github.io/projects" target="_blank" class="menu-item">
+                    <p class="word fancy" id="my">MY</p>
+                    <p class="word fancy" id="works">WORKS</p>
+                </a>
+                <div class="menu-item">
+                    <a href="/contact.html" class="word fancy" id="contacts">
+                        @CONTACT
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="centered">
+            <h1 class="aboutTitle" data-value="MY SOCIALS">
+                MY SOCIALS
+            </h1>
+        </div>
+        <div class="container">
+            <div class="socials">
+                <div class="socials-border">
+                    <a href="https://www.github.com/gyryk" target="_blank" class="git soc">
+                        <img src="img/icons8-github.png" alt="github" id="gitImg" class="socImg">
+                        <p class="vert">@gyryk</p>
+                    </a> <br>
+                </div>
+                <div class="socials-border">
+                    <a href="https://www.linkedin.com/in/gyryk/" target="_blank" class="linked soc">
+                        <img src="img/icons8-linkedin.png" alt="linkedin" id="linkedImg" class="socImg">
+                        <p class="vert">@gyryk</p>
+                    </a> <br>
+                </div>
+                <div class="socials-border">
+                    <a href="https://www.twitter.com/gyryk" target="_blank" class="twit soc">
+                        <img src="img/icons8-twitter.png" alt="twitter" id="twitImg" class="socImg">
+                        <p class="vert">@gyryk</p>
+                    </a> <br>
+                </div>
+                <!--Make new gifs or find a way to replace background with 111111 without losing so much quality-->
+                <!-- <a href="https://www.instagram.com/gyrykEh/" target="_blank" class="insta soc">
+                    <img src="img/icons8-instagram.png" alt="instagram" id="instaImg" class="socImg" width="50%" height="50%">
+                    <p class="vert">@gyrykEh</p>
+                </a> -->
+            </div>
+            <div class="email">
+                <form action="https://formspree.io/f/xleyyqqk" method="POST" class="contact-form">
+                    <div class="email-title">
+                        Or just send me a message! <!--Find a new font-->
+                    </div>
+                    <div class="email-info">
+                        <input type="text" name="name" placeholder="Name" class="interactable">
+                        <input type="email" name="email" placeholder="E-Mail" required>
+                        <input name="subject" type="hidden" value="{{name}} sent a message!" id="subject"/>
+                    </div>
+                    <div class="radio-inputs" placeholder="Reason for message">
+                        <label class="radio">
+                          <input type="radio" name="radio" value="General" checked="" id="generalRadio">
+                          <span class="name">General Inquiries</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="radio" value="Bugs" id="bugRadio">
+                          <span class="name">Bugs & Suggestions</span>
+                        </label>
+                            
+                        <label class="radio">
+                          <input type="radio" name="radio" value="Work" id="workRadio">
+                          <span class="name">Work/Collaboration</span>
+                        </label>
+                      </div>
+                    <!-- <select name="reason" placeholder="Reason for message">
+                        <option value="general">General Inquiries</option>
+                        <option value="work">Work Offers</option>
+                        <option value="bug">Bug/Issue Found</option>
+                        <option value="suggest">Improvements & Suggestions</option>
+                        <option value="other">Other</option>
+                    </select> <br> -->
+                    <textarea name="message" placeholder="Message" required></textarea> <br>
+                    <div class="submission-area">
+                        <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+                        <button type="submit" value="Send"><span>Send</span></button>
+                    </div>
+                </form>
+            </div>>
+        </div>
+            
+    </body>
+</html>
