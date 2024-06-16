@@ -38,7 +38,7 @@ window.onload = (e) => {
     };
 
     left.animate(keyframes, {
-      duration: 1000,
+      duration: 1600,
       fill: "forwards",
       easing: "ease-in-out",
     });

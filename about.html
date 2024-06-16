@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Find me on your favourite social media site, or just shoot me an email!">
-        <meta name="copyright" content="Gyryk">
-        <meta name="author" content="Gyryk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Find me on your favourite social media site, or just shoot me an email!"
+    />
+    <meta name="copyright" content="Gyryk" />
+    <meta name="author" content="Gyryk" />
 
-        <title>About | Gyryk</title>
-        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js" defer></script>
-        <script src="about.js" defer></script>
-    </head>
-    <body>
-        <div id="hamburger" class="hamburger">
-            <button id="menuButton"> <img src="img/burger.svg" alt="hamburger"> </button>
+    <title>About | Gyryk</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script src="about.js" defer></script>
+  </head>
+  <body>
+    <div id="hamburger" class="hamburger">
+      <button id="menuButton">
+        <img src="img/burger.svg" alt="hamburger" />
+      </button>
+    </div>
+    <div id="menu" class="menu">
+      <div id="text">
+        <div class="menu-item">
+          <a href="/" class="word fancy" id="home"> HOMEBASE </a>
         </div>
-        <div id="menu" class="menu">
-            <div id="text">
-                <div class="menu-item">
-                    <a href="/" class="word fancy" id="home">
-                        HOMEBASE
-                    </a>
-                </div>
-                <a href="/about.html" class="menu-item">
-                    <p class="word fancy" id="who">WHO</p>
-                    <p class="word fancy" id="am">AM</p>
-                    <p class="word fancy" id="about">I</p>
-                </a>
-                <a href="http://projects.gyryk.com/" target="_blank" class="menu-item">
-                    <p class="word fancy" id="my">MY</p>
-                    <p class="word fancy" id="works">WORKS</p>
-                </a>
-                <div class="menu-item">
-                    <a href="/contact.html" class="word fancy" id="contacts">
-                        @CONTACT
-                    </a>
-                </div>
-            </div>
+        <a href="/about.html" class="menu-item">
+          <p class="word fancy" id="who">WHO</p>
+          <p class="word fancy" id="am">AM</p>
+          <p class="word fancy" id="about">I</p>
+        </a>
+        <a href="http://projects.gyryk.com/" target="_blank" class="menu-item">
+          <p class="word fancy" id="my">MY</p>
+          <p class="word fancy" id="works">WORKS</p>
+        </a>
+        <div class="menu-item">
+          <a href="/contact.html" class="word fancy" id="contacts">
+            @CONTACT
+          </a>
         </div>
+      </div>
+    </div>
 
-        <div id="centered">
-            <h1 class="aboutTitle" data-value="A BIT ABOUT ME">
-                A BIT ABOUT ME
-            </h1>
+    <div id="centered">
+      <h1 class="aboutTitle" data-value="A BIT ABOUT ME">A BIT ABOUT ME</h1>
+    </div>
+    <div id="centered">
+      <div class="bento-box">
+        <div class="box" id="intro">Welcome to my page!</div>
+        <div class="box" id="photo">
+          <img
+            src="your-photo.jpg"
+            alt="Some Photo"
+            style="width: 100%; border-radius: 5px"
+          />
         </div>
-        <h2>
-            This website is a work in progress and will be updated soon! <br>
-            Sorry for the inconvenience!
-        </h2>
-
-        <!--Apple boxes like design?-->
-        <!--Yoink old skills stuff?-->
-    </body>
+        <div class="box" id="bio">A short biography...</div>
+        <div class="box" id="skills">skills and expertise...</div>
+        <div class="box" id="testimonials">more stuff...</div>
+        <div class="box" id="contact">
+          Contact information and social media links...
+        </div>
+      </div>
+    </div>
+    <!--Apple boxes like design? Bento grid-->
+    <!--Yoink old skills stuff?-->
+  </body>
 </html>
