@@ -1,0 +1,189 @@
+
+.hamburger {
+  position: absolute;
+  z-index: 4;
+  top: 1rem;
+  left: 1rem;
+}
+body.menu-open {
+  overflow: hidden;
+}
+.hamburger > button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.hamburger > button > img {
+  width: 100px;
+  height: 100px;
+}
+
+.showMenu {
+  animation: opening 1.2s forwards;
+}
+
+#text {
+  position: absolute;
+}
+
+.menu {
+  z-index: 10;
+  width: calc(100% - 6rem);
+  transform: translateX(-100%);
+  height: calc(100vh - 4rem);
+  background-color: #111111;
+  margin: 0rem;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  padding: 2rem 3rem;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.word {
+  color: white;
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  margin: 0rem;
+  text-transform: uppercase;
+  transition: opacity 250ms ease;
+}
+
+#text:has(.menu-item:hover) .menu-item:not(.menu-item:hover) {
+  opacity: 0.2;
+}
+
+.menu-item:has(.fancy:hover) .fancy .outer {
+  transition-duration: 800ms;
+}
+
+.menu-item:has(.fancy:hover) .fancy .outer .inner {
+  animation: float 5s ease infinite;
+}
+
+.menu-item:has(.fancy:hover) .outer .inner .letter {
+  background: linear-gradient(to right, var(--red), var(--dark), var(--red));
+  background-size: 1000%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: background-pan 150s linear infinite;
+}
+
+.fancy span {
+  display: inline-block;
+}
+
+.fancy > .outer {
+  transition: transform 350ms ease;
+}
+
+.fancy:hover > .outer {
+  transition-duration: 800ms;
+}
+
+.fancy:hover > .outer > .inner {
+  animation: float 5s ease infinite;
+}
+
+.fancy:hover > .outer > .inner > .letter {
+  background: linear-gradient(to right, var(--red), var(--dark), var(--red));
+  background-size: 1000%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: background-pan 150s linear infinite;
+}
+
+
+/* Individual transformations for each letter on hover */
+.fancy:hover > .outer:nth-child(1) {
+  transform: translate(-80%, 6%) rotate(8deg);
+}
+
+.fancy:hover > .outer:nth-child(2) {
+  transform: translate(-40%, 20%) rotate(4deg);
+}
+
+.fancy:hover > .outer:nth-child(3) {
+  transform: translate(-10%, 60%) rotate(-6deg);
+}
+
+.fancy:hover > .outer:nth-child(4) {
+  transform: translate(0%, 8%) rotate(-8deg);
+}
+
+.fancy:hover > .outer:nth-child(5) {
+  transform: translate(0%, -20%) rotate(5deg);
+}
+
+.fancy:hover > .outer:nth-child(6) {
+  transform: translate(0%, 20%) rotate(-3deg);
+}
+
+.fancy:hover > .outer:nth-child(7) {
+  transform: translate(0%, -40%) rotate(-5deg);
+}
+
+.fancy:hover > .outer:nth-child(8) {
+  transform: translate(0%, 15%) rotate(10deg);
+}
+
+.fancy:hover > .outer:nth-child(9) {
+  transform: translate(0%, -50%) rotate(8deg);
+}
+
+.fancy:hover > .outer:nth-child(10) {
+  transform: translate(0%, 15%) rotate(-6deg);
+}
+
+.fancy:hover > .outer:nth-child(11) {
+  transform: translate(50%, -10%) rotate(-3deg);
+}
+
+.fancy:hover > .outer:nth-child(12) {
+  transform: translate(120%, -30%) rotate(-10deg);
+}
+
+
+/* ANIMATIONS */
+@keyframes opening {
+  from {
+    /* width: 0%; */
+    transform: translateX(-100%);
+  }
+  to {
+    /* width: 100%; translate instead */
+    transform: translateX(0%);
+  }
+}
+
+@keyframes float {
+  from,
+  to {
+    transform: translateY(-0%);
+  }
+
+  50% {
+    transform: translateY(-3%);
+  }
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 1000% center;
+  }
+
+  to {
+    background-position: 0% center;
+  }
+}
