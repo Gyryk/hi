@@ -4,11 +4,22 @@
   align-items: center;
 }
 
-h1 {
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 2rem 8rem 2rem 8rem;
+  width: calc(100% - 16rem);
+  height: calc(100% - 4rem);
+}
+
+.title {
   text-align: center;
   color: var(--light);
   font-family: Gunterz, "Rubik", sans-serif;
   font-weight: 500;
+  font-size: 5rem;
 
   user-select: none;
 }
@@ -16,9 +27,9 @@ h1 {
 .bento-box {
   display: grid;
   gap: 16px;
-  width: 80%;
+  width: 100%;
   max-width: 3200px;
-  height: 2400px;
+  height: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 

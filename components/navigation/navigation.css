@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 .hamburger {
   position: absolute;
@@ -108,14 +108,30 @@ body.menu-open {
 }
 
 /* Individual transformations for each letter on hover */
-.fancy:hover > .outer[data-index="0"] { transform: translate(-80%, 6%) rotate(8deg); }
-.fancy:hover > .outer[data-index="1"] { transform: translate(-35%, 18%) rotate(4deg); }
-.fancy:hover > .outer[data-index="2"] { transform: translate(-5%, 60%) rotate(-6deg); }
-.fancy:hover > .outer[data-index="3"] { transform: translate(0%, 10%) rotate(-8deg); }
-.fancy:hover > .outer[data-index="4"] { transform: translate(5%, -20%) rotate(5deg); }
-.fancy:hover > .outer[data-index="5"] { transform: translate(15%, 15%) rotate(-5deg); }
-.fancy:hover > .outer[data-index="6"] { transform: translate(40%, -10%) rotate(10deg); }
-.fancy:hover > .outer[data-index="7"] { transform: translate(80%, -30%) rotate(-10deg); }
+.fancy:hover > .outer[data-index="0"] {
+  transform: translate(-80%, 6%) rotate(8deg);
+}
+.fancy:hover > .outer[data-index="1"] {
+  transform: translate(-35%, 18%) rotate(4deg);
+}
+.fancy:hover > .outer[data-index="2"] {
+  transform: translate(-5%, 60%) rotate(-6deg);
+}
+.fancy:hover > .outer[data-index="3"] {
+  transform: translate(0%, 10%) rotate(-8deg);
+}
+.fancy:hover > .outer[data-index="4"] {
+  transform: translate(5%, -20%) rotate(5deg);
+}
+.fancy:hover > .outer[data-index="5"] {
+  transform: translate(15%, 15%) rotate(-5deg);
+}
+.fancy:hover > .outer[data-index="6"] {
+  transform: translate(40%, -10%) rotate(10deg);
+}
+.fancy:hover > .outer[data-index="7"] {
+  transform: translate(80%, -30%) rotate(-10deg);
+}
 
 /* ANIMATIONS */
 @keyframes opening {
