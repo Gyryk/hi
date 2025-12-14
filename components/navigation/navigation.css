@@ -170,11 +170,11 @@ body.menu-open {
 @keyframes float {
   from,
   to {
-    transform: translateY(-0%);
+    transform: translateY(0%);
   }
 
   50% {
-    transform: translateY(-3%);
+    transform: translateY(-5%);
   }
 }
 
