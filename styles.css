@@ -45,6 +45,8 @@ h1 {
   font-weight: 400;
   font-size: 5rem;
   width: 60vw;
+
+  user-select: none;
 }
 
 .bento-box {
