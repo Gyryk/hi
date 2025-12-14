@@ -48,7 +48,7 @@
 /* FONT FACES */
 @font-face {
   font-family: Gunterz;
-  src: url("public/Gunterz.otf");
+  src: url("/public/Gunterz.otf");
 }
 
 /* DEVICE TYPE MEDIA QUERIES */

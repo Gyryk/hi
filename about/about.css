@@ -1,8 +1,4 @@
-#centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 .wrapper {
   display: flex;
@@ -19,18 +15,16 @@
   color: var(--light);
   font-family: Gunterz, "Rubik", sans-serif;
   font-weight: 500;
-  font-size: 5rem;
 
   user-select: none;
 }
 
 .bento-box {
   display: grid;
-  gap: 16px;
+  gap: 20px;
   width: 100%;
-  max-width: 3200px;
-  height: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: minmax(100px, 1fr);
 }
 
 .box {
@@ -40,55 +34,94 @@
   padding: 20px;
   background-color: var(--light);
   text-align: center;
-  border-radius: 5px;
+  border-radius: 1.5rem;
+
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 /* Specific grid item spans */
-#intro {
+#photo {
   grid-column: 1 / 3;
+  grid-row: 1 / 3;
+
+  padding: 0;
+}
+
+#photo img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+#intro {
+  grid-column: 3 / 6;
   grid-row: 1 / 2;
 }
 
-#photo {
-  grid-column: 3 / 4;
-  grid-row: 1 / 3;
-}
-
-#bio {
-  grid-column: 1 / 2;
-  grid-row: 2 / 4;
+#experience {
+  grid-column: 6 / 8;
+  grid-row: 1 / 4;
 }
 
 #skills {
-  grid-column: 2 / 4;
+  grid-column: 1 / 4;
   grid-row: 3 / 4;
 }
 
-#testimonials {
-  grid-column: 1 / 4;
-  grid-row: 4 / 8;
+#quote {
+  grid-column: 4 / 6;
+  grid-row: 3 / 4;
+
+  flex-direction: column;
+  gap: 20px;
+}
+#accreditation {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  font-size: 1rem;
 }
 
-#contact {
-  grid-column: 2 / 3;
+#contact-git {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+#contact-linked {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+#contact-email {
+  grid-column: 5 / 6;
   grid-row: 2 / 3;
 }
 
 /* FONT FACES */
 @font-face {
   font-family: Gunterz;
-  src: url("public/Gunterz.otf");
+  src: url("/public/Gunterz.otf");
 }
 
 /* DEVICE TYPE MEDIA QUERIES */
 @media only screen and ((max-width: 767px) or (hover: none) or (orientation: portrait)) {
-  h1 {
+  .title {
     font-size: 3rem;
+  }
+
+  /* Stack and normalize grid on small screens */
+  .bento-box {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    min-height: auto;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  h1 {
+  .title {
     font-size: 5rem;
   }
 }
