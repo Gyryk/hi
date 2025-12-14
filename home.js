@@ -2,35 +2,42 @@
 const symbols =
   "ぁぃぅぇぉかきくけこさしすせそたちってとなにぬねのはひふへほみむめもゃゅょらりるれろゎゐゑをんゔゕゖ゚ゝゟ゠ァィゥェォカキクコサスセソタチッテトナニヌネノハヒフヘホマミムメモャュョラリルレロヮヰヱヲヵヶヽヿ㍐";
 
-window.onload = (e) => {
+window.onload = () => {
   i = 0;
   const titleElements = document.querySelectorAll(".title");
   const inter = setInterval(() => {
     titleElements.forEach((titleElement) => {
       titleElement.innerText = titleElement.innerText
         .split("")
-        .map((symbol, inx) => {
+        .map((_, inx) => {
           if (inx < i) {
-            return titleElement.dataset.og[inx];
+            return titleElement.dataset.value[inx];
           }
 
-          return symbols[Math.floor(Math.random() * 102)];
+          return symbols[Math.floor(Math.random() * symbols.length)];
         })
         .join("");
 
-      if (i >= titleElement.dataset.og.length) clearInterval(inter);
+      if (i >= titleElement.dataset.value.length) clearInterval(inter);
 
-      i += 1 / 10;
+      i += 1 / 8;
     });
   }, 25);
+
   titleElements.forEach((titleElement) => {
-    titleElement.innerText = titleElement.dataset.og;
+    titleElement.innerText = titleElement.dataset.value;
   });
 
   const left = document.getElementById("left-side");
 
   // Handle mouse and touch events
   const handleMove = (e) => {
+    // Don't move if menu is open
+    const menu = document.querySelector(".menu");
+    if (menu && menu.classList.contains("showMenu")) {
+      return;
+    }
+
     left.style.width = `${(e.clientX / window.innerWidth) * 100}%`;
 
     const keyframes = {
@@ -38,17 +45,15 @@ window.onload = (e) => {
     };
 
     left.animate(keyframes, {
-      duration: 1600,
+      duration: 2400,
       fill: "forwards",
       easing: "ease-in-out",
     });
 
-    // There is an odd bug where the title text will disappear if the mouse is moved to the left edge of the window while the title is still being generated
-    // I have solved it by setting the default text to the original text, but I am still unsure why it happens
     const titleElements = document.querySelectorAll(".title");
     titleElements.forEach((titleElement) => {
       if (titleElement.innerText.length < 1) {
-        titleElement.innerText = titleElement.dataset.og;
+        titleElement.innerText = titleElement.dataset.value;
       }
     });
   };
