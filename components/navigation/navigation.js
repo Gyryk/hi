@@ -28,9 +28,7 @@ async function loadNavigation() {
 function initializeMenu() {
   const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-  const enhance = id => {
-    const element = document.getElementById(id);
-
+  const enhance = element => {
     if (element && element.textContent.trim() !== '') {
       const text = element.textContent.trim().split("");
     
@@ -67,7 +65,7 @@ function initializeMenu() {
   // Enhance all menu text animations
   const fancyElements = document.querySelectorAll('.fancy');
   fancyElements.forEach(element => {
-    enhance(element.id);
+    enhance(element);
   });
 
   // Set up menu button click handler
