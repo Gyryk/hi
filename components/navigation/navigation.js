@@ -31,13 +31,16 @@ function initializeMenu() {
   const enhance = element => {
     if (element && element.textContent.trim() !== '') {
       const text = element.textContent.trim().split("");
-    
+      const start = element.dataset.start ? parseInt(element.dataset.start) : 0;
+
       element.textContent = "";
       
       text.forEach((value, index) => {
         const outer = document.createElement("span");
         
         outer.className = "outer";
+        // mark each outer with a 1-based index so CSS can target letters reliably
+        outer.dataset.index = index + start;
         
         const inner = document.createElement("span");
         

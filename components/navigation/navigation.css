@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 .hamburger {
   position: absolute;
@@ -49,13 +50,15 @@ body.menu-open {
 }
 
 .word {
-  color: white;
-  font-size: clamp(3rem, 8vw, 8rem);
-  font-family: "Rubik", sans-serif;
+  color: var(--light);
+  font-family: "Rubik";
   font-weight: 500;
   margin: 0rem;
   text-transform: uppercase;
   transition: opacity 250ms ease;
+}
+#projects {
+  letter-spacing: 0.04em;
 }
 
 #text:has(.menu-item:hover) .menu-item:not(.menu-item:hover) {
@@ -106,53 +109,14 @@ body.menu-open {
 
 
 /* Individual transformations for each letter on hover */
-.fancy:hover > .outer:nth-child(1) {
-  transform: translate(-80%, 6%) rotate(8deg);
-}
-
-.fancy:hover > .outer:nth-child(2) {
-  transform: translate(-40%, 20%) rotate(4deg);
-}
-
-.fancy:hover > .outer:nth-child(3) {
-  transform: translate(-10%, 60%) rotate(-6deg);
-}
-
-.fancy:hover > .outer:nth-child(4) {
-  transform: translate(0%, 8%) rotate(-8deg);
-}
-
-.fancy:hover > .outer:nth-child(5) {
-  transform: translate(0%, -20%) rotate(5deg);
-}
-
-.fancy:hover > .outer:nth-child(6) {
-  transform: translate(0%, 20%) rotate(-3deg);
-}
-
-.fancy:hover > .outer:nth-child(7) {
-  transform: translate(0%, -40%) rotate(-5deg);
-}
-
-.fancy:hover > .outer:nth-child(8) {
-  transform: translate(0%, 15%) rotate(10deg);
-}
-
-.fancy:hover > .outer:nth-child(9) {
-  transform: translate(0%, -50%) rotate(8deg);
-}
-
-.fancy:hover > .outer:nth-child(10) {
-  transform: translate(0%, 15%) rotate(-6deg);
-}
-
-.fancy:hover > .outer:nth-child(11) {
-  transform: translate(50%, -10%) rotate(-3deg);
-}
-
-.fancy:hover > .outer:nth-child(12) {
-  transform: translate(120%, -30%) rotate(-10deg);
-}
+.fancy:hover > .outer[data-index="0"] { transform: translate(-80%, 6%) rotate(8deg); }
+.fancy:hover > .outer[data-index="1"] { transform: translate(-35%, 18%) rotate(4deg); }
+.fancy:hover > .outer[data-index="2"] { transform: translate(-5%, 60%) rotate(-6deg); }
+.fancy:hover > .outer[data-index="3"] { transform: translate(0%, 10%) rotate(-8deg); }
+.fancy:hover > .outer[data-index="4"] { transform: translate(5%, -20%) rotate(5deg); }
+.fancy:hover > .outer[data-index="5"] { transform: translate(15%, 15%) rotate(-5deg); }
+.fancy:hover > .outer[data-index="6"] { transform: translate(40%, -10%) rotate(10deg); }
+.fancy:hover > .outer[data-index="7"] { transform: translate(80%, -30%) rotate(-10deg); }
 
 
 /* ANIMATIONS */
@@ -185,5 +149,18 @@ body.menu-open {
 
   to {
     background-position: 0% center;
+  }
+}
+
+/* DEVICE TYPE MEDIA QUERIES */
+@media only screen and ((max-width: 767px) or (hover: none) or (orientation: portrait)) {
+  .word {
+    font-size: clamp(3rem, 13vw, 5rem);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .word {
+    font-size: clamp(7rem, 13vw, 12rem);
   }
 }
