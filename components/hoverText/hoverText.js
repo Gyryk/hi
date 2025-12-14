@@ -31,4 +31,3 @@ function initializeHoverText(selector = '.hoverText') {
 document.addEventListener('DOMContentLoaded', () => {
   initializeHoverText('.hoverText');
 });
-

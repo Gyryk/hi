@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+
+.title {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-family: "Noto Sans Mono", Gunterz;
+  text-transform: uppercase;
+  font-weight: 900;
+
+  margin: 0px 10vw;
+  width: 80vw;
+
+  user-select: none;
+  cursor: default;
+}
+
+/* CODE FOR THE SLIDING SCREEN */
+.side {
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  place-items: center;
+  position: absolute;
+  width: 100%;
+}
+
+#left-side {
+  background-color: #111111;
+  width: 60%;
+  z-index: 2;
+}
+
+#left-side .title {
+  color: var(--light);
+}
+
+#right-side {
+  background-color: #f04044;
+}
+
+#right-side .title {
+  color: var(--gray);
+}
+
+/* FONT FACES */
+@font-face {
+  font-family: Gunterz;
+  src: url("public/Gunterz.otf");
+}
+
+/* DEVICE TYPE MEDIA QUERIES */
+@media only screen and ((max-width: 767px) or (hover: none) or (orientation: portrait)) {
+  .title {
+    font-size: 10vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 5vw;
+  }
+}

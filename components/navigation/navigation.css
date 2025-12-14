@@ -2,7 +2,7 @@
 
 .hamburger {
   position: absolute;
-  z-index: 4;
+  z-index: 99;
   top: 1rem;
   left: 1rem;
 }
@@ -30,7 +30,7 @@ body.menu-open {
 }
 
 .menu {
-  z-index: 10;
+  z-index: 100;
   width: calc(100% - 6rem);
   transform: translateX(-100%);
   height: calc(100vh - 4rem);
@@ -107,7 +107,6 @@ body.menu-open {
   animation: background-pan 150s linear infinite;
 }
 
-
 /* Individual transformations for each letter on hover */
 .fancy:hover > .outer[data-index="0"] { transform: translate(-80%, 6%) rotate(8deg); }
 .fancy:hover > .outer[data-index="1"] { transform: translate(-35%, 18%) rotate(4deg); }
@@ -117,7 +116,6 @@ body.menu-open {
 .fancy:hover > .outer[data-index="5"] { transform: translate(15%, 15%) rotate(-5deg); }
 .fancy:hover > .outer[data-index="6"] { transform: translate(40%, -10%) rotate(10deg); }
 .fancy:hover > .outer[data-index="7"] { transform: translate(80%, -30%) rotate(-10deg); }
-
 
 /* ANIMATIONS */
 @keyframes opening {

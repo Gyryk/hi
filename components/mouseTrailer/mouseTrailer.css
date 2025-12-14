@@ -1,0 +1,32 @@
+#trailer {
+  background-color: #ff4a4a;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-color: transparent;
+  border-radius: 1.5rem;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#trailer-icon {
+  width: 0.75rem;
+  transform: translate(50%, 30%);
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+#trailer:not([data-type=""]) > #trailer-icon {
+  opacity: 1;
+}
+
+body:hover > #trailer {
+  opacity: 1;
+}
