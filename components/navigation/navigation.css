@@ -16,11 +16,6 @@ body.menu-open {
   cursor: pointer;
 }
 
-.hamburger > button > img {
-  width: 100px;
-  height: 100px;
-}
-
 .showMenu {
   animation: opening 1.2s forwards;
 }
@@ -167,14 +162,24 @@ body.menu-open {
 }
 
 /* DEVICE TYPE MEDIA QUERIES */
+@media only screen and (min-width: 768px) {
+  .word {
+    font-size: clamp(7rem, 13vw, 12rem);
+  }
+
+  .hamburger > button > img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 @media only screen and ((max-width: 767px) or (hover: none) or (orientation: portrait)) {
   .word {
     font-size: clamp(3rem, 13vw, 5rem);
   }
-}
 
-@media only screen and (min-width: 768px) {
-  .word {
-    font-size: clamp(7rem, 13vw, 12rem);
+  .hamburger > button > img {
+    width: 50px;
+    height: 50px;
   }
 }

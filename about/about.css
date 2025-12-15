@@ -4,10 +4,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  padding: 2rem 8rem 2rem 8rem;
-  width: calc(100% - 16rem);
+  gap: 48px;
+  padding: 2rem 7rem 2rem 7rem;
+  width: calc(100% - 14rem);
   height: calc(100% - 4rem);
+  min-width: 400px;
 }
 
 .title {
@@ -20,18 +21,17 @@
 }
 
 .bento-box {
-  display: grid;
-  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
   width: 100%;
-  grid-template-columns: repeat(7, 1fr);
-  grid-auto-rows: minmax(100px, 1fr);
 }
 
 .box {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 32px;
   background-color: var(--light);
   text-align: center;
   border-radius: 1.5rem;
@@ -41,63 +41,157 @@
   font-size: 2rem;
 }
 
-/* Specific grid item spans */
-#photo {
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
-
-  padding: 0;
+.big-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 5;
+  height: 100%;
 }
 
-#photo img {
+.big-row {
+  display: flex;
+  gap: 16px;
+}
+
+.logo {
+  flex: 2;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  background-color: #df5051;
+}
+.logo img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  display: block;
+  overflow: hidden;
+}
+
+/* Intro and Contacts Column */
+.intro-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 3;
+}
+
+.contacts-row {
+  display: flex;
+  gap: 16px;
+}
+
+.intro {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 1.5rem;
+}
+
+.socImg {
+  flex: 1;
+  overflow: hidden;
+}
+.socImg img {
+  max-width: 96px;
+  max-height: 96px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
   width: 100%;
   height: 100%;
   display: block;
   overflow: hidden;
 }
 
-#intro {
-  grid-column: 3 / 6;
-  grid-row: 1 / 2;
+/* Experience Box */
+.experienceContainer {
+  flex-direction: column;
+  text-align: left;
+  align-items: start;
+  justify-content: space-between;
+  gap: 24px;
+  flex: 2;
+}
+.experienceGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+}
+#experienceType {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  font-weight: 500;
+}
+.experienceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.experienceHeader {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-weight: 500;
+}
+.experienceTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+#subtitle {
+  font-size: 1rem;
 }
 
-#experience {
-  grid-column: 6 / 8;
-  grid-row: 1 / 4;
+/* Skills and Quote Row */
+.row {
+  display: flex;
+  gap: 16px;
+  flex: 1;
 }
 
-#skills {
-  grid-column: 1 / 4;
-  grid-row: 3 / 4;
+.skills {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-weight: 500;
+}
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
-#quote {
-  grid-column: 4 / 6;
-  grid-row: 3 / 4;
+.quote {
+  flex: 2;
 
   flex-direction: column;
-  gap: 20px;
+  gap: 48px;
+  font-size: 1.5rem;
 }
 #accreditation {
   display: flex;
   width: 100%;
   flex-direction: row-reverse;
   font-size: 1rem;
-}
-
-#contact-git {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-#contact-linked {
-  grid-column: 4 / 5;
-  grid-row: 2 / 3;
-}
-#contact-email {
-  grid-column: 5 / 6;
-  grid-row: 2 / 3;
+  font-weight: 500;
 }
 
 /* FONT FACES */
@@ -106,22 +200,111 @@
   src: url("/public/Gunterz.otf");
 }
 
-/* DEVICE TYPE MEDIA QUERIES */
-@media only screen and ((max-width: 767px) or (hover: none) or (orientation: portrait)) {
+/* Large screens */
+@media (min-width: 1200px) {
   .title {
-    font-size: 3rem;
-  }
-
-  /* Stack and normalize grid on small screens */
-  .bento-box {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    min-height: auto;
+    font-size: 5rem;
   }
 }
 
-@media only screen and (min-width: 768px) {
+/* Medium / tablet screens */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .wrapper {
+    padding: 2rem;
+    width: calc(100% - 4rem);
+    gap: 36px;
+    overflow-x: hidden;
+  }
+
   .title {
-    font-size: 5rem;
+    font-size: clamp(3rem, 6vw, 4rem);
+  }
+
+  .box {
+    padding: 24px;
+    font-size: 1.5rem;
+  }
+
+  .big-column {
+    flex: 6;
+  }
+  .experienceContainer {
+    flex: 4;
+  }
+
+  .logo {
+    padding: 0;
+  }
+  .socImg {
+    padding: 12px;
+  }
+
+  .skillList {
+    gap: 6px;
+    font-size: 1rem;
+  }
+  .quote {
+    font-size: 1.25rem;
+    gap: 24px;
+  }
+  .intro {
+    font-size: 1rem;
+  }
+
+  .experienceHeader {
+    font-size: 1.25rem;
+  }
+  #subtitle {
+    font-size: 0.875rem;
+  }
+}
+
+/* Small / mobile screens stack the layout vertically */
+@media only screen and ((max-width: 767px) or (hover: none) or (orientation: portrait)) {
+  .wrapper {
+    padding: 2rem;
+    width: calc(100% - 4rem);
+    gap: 48px;
+    height: 100%;
+  }
+
+  .title {
+    font-size: clamp(1rem, 5vw, 2.5rem);
+  }
+
+  .bento-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .box {
+    padding: 24px;
+    font-size: 2rem;
+  }
+
+  .logo {
+    padding: 0;
+  }
+  .socImg {
+    padding: 8px;
+  }
+
+  .skillList {
+    gap: 8px;
+    font-size: 1.5rem;
+  }
+  .quote {
+    font-size: 1.5rem;
+  }
+  .intro {
+    font-size: 1.5rem;
+  }
+
+  .experienceHeader {
+    font-size: 1.5rem;
+  }
+  #subtitle {
+    font-size: 1rem;
   }
 }

@@ -28,49 +28,121 @@
   </head>
   <body>
     <div class="wrapper">
-      <span class="hoverText title" data-value="A BIT ABOUT ME">A BIT ABOUT ME</span>
+      <span class="hoverText title" data-value="WHO AM I?">WHO AM I?</span>
       <div class="bento-box">
-        <div class="box logo" id="photo">
-          <img
-            src="/img/logo.png"
-            alt="Gyryk"
-            style="width: 100%; border-radius: 5px"
-            id="logoImg"
-          />
+        <div class="big-column">
+          <div class="big-row">
+            <div class="box logo">
+              <img
+                src="/img/logo.png"
+                alt="Gyryk"
+                id="logoImg"
+              />
+            </div>
+
+            <div class="intro-wrapper">
+              <div class="box intro">
+                <span>Software developer currently in my final year at university studying Computer Science.</span>
+                <span>A proactive contributor as well as an innovative and creative problem solver.</span>
+              </div>
+            
+              <div class="contacts-row">
+                <a href="https://www.github.com/gyryk" id="contact-git" target="_blank" class="socImg box git">
+                  <img
+                      src="/img/icons8-github-96.png"
+                      alt="github"
+                      id="gitImg"
+                    />
+                </a>
+                <a href="https://www.linkedin.com/in/gyryk/" id="contact-linked" target="_blank" class="socImg box linked">
+                  <img
+                    src="/img/icons8-linkedin-96.png"
+                    alt="linkedin"
+                    id="linkedImg"
+                  />
+                </a>
+                <a href="mailto:gyryknotgirik@gmail.com" id="contact-email" target="_blank" class="socImg box email">
+                  <img
+                    src="/img/email.png"
+                    alt="email"
+                    id="emailImg"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="box skills">
+              <span>Areas of Expertise</span>
+              <div class="skillList">
+                <span>JavaScript, Java, C#, Swift, C++, Python</span>
+                <span>React, Node.js, .NET, Playwright, SignalR</span>
+                <span>UNIX, Git, AWS, Docker, SQL, MongoDB</span>
+              </div>
+            </div>
+
+            <div class="box quote">
+              <span>Love all that life throws your way and that which is fated for you. What more could you want?</span>
+              <span id="accreditation">~ Marcus Aurelius</span>
+            </div>
+          </div>
         </div>
 
-        <div class="box" id="intro">Welcome to my page!</div>
-
-        <div class="box" id="experience">My Work Experience</div>
-
-        <div class="box" id="skills">Skills and expertise...</div>
-
-        <div class="box" id="quote"><span>Love all that life throws your way and that which is fated for you. What more could you want?</span><span id="accreditation">~ Marcus Aurelius</span></div>
-
-        <a class="box git" id="contact-git" href="https://www.github.com/gyryk" target="_blank">
-          <img
-              src="/img/icons8-github-96.png"
-              alt="github"
-              id="gitImg"
-              class="socImg"
-            />
-        </a>
-        <a href="https://www.linkedin.com/in/gyryk/" id="contact-linked" target="_blank" class="box linked">
-          <img
-            src="/img/icons8-linkedin-96.png"
-            alt="linkedin"
-            id="linkedImg"
-            class="socImg"
-          />
-        </a>
-        <a href="mailto:gyryknotgirik@gmail.com" id="contact-email" target="_blank" class="box email">
-          <img
-            src="/img/icons8-email-96.png"
-            alt="email"
-            id="emailImg"
-            class="socImg"
-          />
-        </a>
+        <div class="experienceContainer box">
+          <div class="experienceGroup">
+            <span id="experienceType">Experience</span>
+            <div class="experience">
+              <div class="experienceContent">
+                <div class="experienceHeader">
+                  <div class="experienceTitle">
+                    <span>Frontend Web Developer</span>
+                    <span id="subtitle">KAI Consulting</span>
+                  </div>
+                  <span id="subtitle">10/2025 - Present</span>
+                </div>
+                <span id="subtitle">
+                  Utilised libraries like SignalR to provide performant real-time data on a responsive React website.
+                </span>
+              </div>
+              <div class="experienceContent">
+                <div class="experienceHeader">
+                  <div class="experienceTitle">
+                    <span>Software Engineer Intern</span>
+                    <span id="subtitle">Amazon</span>
+                  </div>
+                  <span id="subtitle">06/2025 - 08/2025</span>
+                </div>
+                <span id="subtitle">
+                  Leveraged AWS OpenSearch to automate big cluster resharding processes, reducing operations cost by roughly $100,000 annually.
+                </span>
+              </div>
+              <div class="experienceContent">
+                <div class="experienceHeader">
+                  <div class="experienceTitle">
+                    <span>Frontend Web Developer</span>
+                    <span id="subtitle">KAI Consulting</span>
+                  </div>
+                  <span id="subtitle">04/2024 - 05/2025</span>
+                </div>
+                <span id="subtitle">
+                  Built a responsive web interface using React, TypeScript, Material-UI, and REST APIs as part of a small agile team.
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="experienceGroup">
+            <span id="experienceType">Education</span>
+            <div class="experienceHeader">
+              <div class="experienceTitle">
+                <span>BSc Computer Science</span>
+                <span id="subtitle">City, University of London</span>
+              </div>
+              <span id="subtitle">09/2023 - Present</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
