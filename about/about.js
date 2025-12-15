@@ -1,25 +1,3 @@
-// // Make grid cells square (column width = row height)
-// function makeGridSquare() {
-//   const bentoBox = document.querySelector(".bento-box");
-//   if (!bentoBox) return;
-
-//   const boxWidth = bentoBox.offsetWidth;
-//   const gap = parseInt(window.getComputedStyle(bentoBox).gap);
-//   const numColumns = 7;
-
-//   // Calculate column width: (total width - gaps) / columns
-//   const totalGapWidth = gap * (numColumns - 1);
-//   const columnWidth = (boxWidth - totalGapWidth) / numColumns;
-
-//   // Set row height to match column width
-//   bentoBox.style.gridAutoRows = columnWidth + "px";
-// }
-
-// // Call on load and on resize
-// window.addEventListener("load", makeGridSquare);
-// window.addEventListener("resize", makeGridSquare);
-// makeGridSquare(); // Call immediately in case already loaded
-
 // Socials Hover
 document.querySelector(".git").addEventListener("mouseover", function () {
   document.getElementById("gitImg").src = "/img/github.gif";
